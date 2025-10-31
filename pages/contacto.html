@@ -1,49 +1,102 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, viewport-fit=cover">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz@6..12&display=swap" rel="stylesheet">
-        <link href="../css/output.css" rel="stylesheet">
-        <title>Sitio Oficial de Phoebe Buffay</title>
-    </head>
-    <body>
-        <header>
-            <h1>Phoebe Buffay</h1>
-        </header>
-        <main>
-            <div class="bg-violet-300 flex-auto flex-col">
-                <nav class="navigation">
-                    <ul>
-                        <li><a class="menu" href ="../index.html">Inicio</a></li>
-                        <li><a class="menu" href="musica.html">Musica</a></li>
-                        <li><a class="menu" href="bio.html">Bio</a></li>
-                        <li><a class="menu" href="tour.html">Tour</a></li>
-                        <li><a class="menu" href="tienda.html">Tienda</a></li>
-                    </ul>
-                </nav>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Phoebe Buffay</title>
+    <link rel="stylesheet" href="../css/estilos.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html" class="logo-link">
+                    <h1 class="logo-title">Phoebe Buffay</h1>
+                </a>
             </div>
-            <div class="bg-violet-500 container">
-                
-            </div>
-        </main>
-        <footer>
-            <div class="bg-violet-300">
-                <ul>
-                    <li class="instagram"><a href="https://www.instagram.com/itsmephoebebuffay"><img src="img/instalogo.png"></a></li>
-                    <li class="tiktok"><a href="https://www.tiktok.com/@phoebebuffays_girlfriend"><img src="img/tiktoklogo.png"></a></li>
-                    <li class="twitterX"><a href="https://x.com/phoebebuffay_1"><img src="img/twitterx.png"></a></li>
+            <nav class="nav">
+                <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+                <ul class="nav-list" id="navList">
+                    <li><a href="../index.html" class="nav-link">Inicio</a></li>
+                    <li><a href="musica.html" class="nav-link">Música</a></li>
+                    <li><a href="biografia.html" class="nav-link">Biografía</a></li>
+                    <li><a href="tour.html" class="nav-link active">Tour</a></li>
+                    <li><a href="videos.html" class="nav-link">Videos</a></li>
+                    <li><a href="contacto.html" class="nav-link">Contacto</a></li>
+                    <li><a href="sobre-proyecto.html" class="nav-link">Sobre el proyecto</a></li>
                 </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main class="main">
+        <!-- CONTACTO SECTION -->
+        <section class="section-contacto" style="padding-top: 8rem;">
+            <div class="container">
+                <h2 class="section-title">Contacto</h2>
+                <div class="contacto-content">
+                    <div class="contacto-form">
+                        <h3 style="margin-bottom: 2rem; color: var(--violeta-oscuro);">Envíanos un mensaje</h3>
+                        <form id="contactForm">
+                            <div class="form-group">
+                                <label for="nombre">Nombre</label>
+                                <input type="text" id="nombre" name="nombre" required>
+                                <span class="error-message" id="nombreError"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required>
+                                <span class="error-message" id="emailError"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="mensaje">Mensaje</label>
+                                <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+                                <span class="error-message" id="mensajeError"></span>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Enviar mensaje</button>
+                        </form>
+                    </div>
+                    <div class="contacto-info">
+                        <h3>Redes sociales</h3>
+                        <div class="redes-sociales">
+                            <a href="https://www.youtube.com/@Friends" target="_blank" class="red-social">
+                                <span class="red-icon">📺</span>
+                                <span>YouTube</span>
+                            </a>
+                            <a href="https://www.instagram.com/friends/?hl=es" target="_blank" class="red-social">
+                                <span class="red-icon">📷</span>
+                                <span>Instagram</span>
+                            </a>
+                        </div>
+                        <div style="margin-top: 3rem; padding-top: 2rem; border-top: 2px solid var(--gris-claro);">
+                            <h3 style="margin-bottom: 1rem;">Información de contacto</h3>
+                            <p style="color: var(--gris-medio); line-height: 1.8;">
+                                <strong>Email:</strong> phoebe@buffay.com<br>
+                                <strong>Booking:</strong> booking@phoebebuffay.com<br>
+                                <strong>Prensa:</strong> prensa@phoebebuffay.com
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="about">
-            2025. Creado por Zoe Del Moral y Alejandra Adrian. Licenciatura en Artes Multimediales - UNA
-            <a href="sobre-nosotras.html">Sobre Nosotras</a>
-            </div>
-            <div class="contacto">
-            <a href="contacto.html">Contacto</a>
-            </div>
-        </footer>
-    </body>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2024 Phoebe Buffay. Todos los derechos reservados.</p>            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../javascript/script.js"></script>
+</body>
 </html>
+

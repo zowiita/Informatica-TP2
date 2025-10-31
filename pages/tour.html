@@ -1,49 +1,225 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, viewport-fit=cover">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz@6..12&display=swap" rel="stylesheet">
-        <link href="../css/output.css" rel="stylesheet">
-        <title>Sitio Oficial de Phoebe Buffay</title>
-    </head>
-    <body>
-        <header>
-            <h1>Phoebe Buffay</h1>
-        </header>
-        <main>
-            <div class="bg-violet-300 flex-auto flex-col">
-                <nav class="navigation">
-                    <ul>
-                        <li><a class="menu" href ="../index.html">Inicio</a></li>
-                        <li><a class="menu" href="musica.html">Musica</a></li>
-                        <li><a class="menu" href="bio.html">Bio</a></li>
-                        <li><a class="active" href="tour.html">Tour</a></li>
-                        <li><a class="menu" href="tienda.html">Tienda</a></li>
-                    </ul>
-                </nav>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour 🎤 - Phoebe Buffay</title>
+    <link rel="stylesheet" href="../css/estilos.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html" class="logo-link">
+                    <h1 class="logo-title">Phoebe Buffay</h1>
+                </a>
             </div>
-            <div class="bg-violet-500 container">
-                <p>Content</p>
-            </div>
-        </main>
-        <footer>
-            <div class="bg-violet-300">
-                <ul>
-                    <li class="instagram"><a href="https://www.instagram.com/itsmephoebebuffay"><img src="img/instalogo.png"></a></li>
-                    <li class="tiktok"><a href="https://www.tiktok.com/@phoebebuffays_girlfriend"><img src="img/tiktoklogo.png"></a></li>
-                    <li class="twitterX"><a href="https://x.com/phoebebuffay_1"><img src="img/twitterx.png"></a></li>
+            <nav class="nav">
+                <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+                <ul class="nav-list" id="navList">
+                    <li><a href="../index.html" class="nav-link">Inicio</a></li>
+                    <li><a href="musica.html" class="nav-link">Música</a></li>
+                    <li><a href="biografia.html" class="nav-link">Biografía</a></li>
+                    <li><a href="tour.html" class="nav-link active">Tour</a></li>
+                    <li><a href="videos.html" class="nav-link">Videos</a></li>
+                    <li><a href="contacto.html" class="nav-link">Contacto</a></li>
+                    <li><a href="sobre-proyecto.html" class="nav-link">Sobre el proyecto</a></li>
                 </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main class="main">
+        <!-- TOUR SECTION -->
+        <section class="section-tour" style="padding-top: 8rem;">
+            <div class="container">
+                <h2 class="section-title">Tour 🎤</h2>
+                <div class="tour-header">
+                    <p class="tour-notice">Tickets a la venta próximamente</p>
+                </div>
+                <div class="tour-shows">
+                    <div class="show-item">
+                        <div class="show-date">
+                            <span class="show-day">15</span>
+                            <span class="show-month">MAR</span>
+                        </div>
+                        <div class="show-info">
+                            <h3>Central Park, Nueva York</h3>
+                            <p>Show acústico al aire libre</p>
+                            <p class="show-details">Un concierto íntimo bajo las estrellas en el corazón de Manhattan.</p>
+                        </div>
+                        <div class="show-status">
+                            <button class="btn-comprar-ticket" onclick="mostrarAlertaTickets()">Próximamente</button>
+                        </div>
+                    </div>
+                    <div class="show-item">
+                        <div class="show-date">
+                            <span class="show-day">22</span>
+                            <span class="show-month">MAR</span>
+                        </div>
+                        <div class="show-info">
+                            <h3>The Blue Note, Manhattan</h3>
+                            <p>Concierto íntimo</p>
+                            <p class="show-details">Una noche especial en uno de los venues más emblemáticos de Nueva York.</p>
+                        </div>
+                        <div class="show-status">
+                            <button class="btn-comprar-ticket" onclick="mostrarAlertaTickets()">Próximamente</button>
+                        </div>
+                    </div>
+                    <div class="show-item">
+                        <div class="show-date">
+                            <span class="show-day">05</span>
+                            <span class="show-month">ABR</span>
+                        </div>
+                        <div class="show-info">
+                            <h3>Bowery Ballroom, NYC</h3>
+                            <p>Noche especial con invitados</p>
+                            <p class="show-details">Un show único con artistas invitados y sorpresas especiales.</p>
+                        </div>
+                        <div class="show-status">
+                            <button class="btn-comprar-ticket" onclick="mostrarAlertaTickets()">Próximamente</button>
+                        </div>
+                    </div>
+                    <div class="show-item">
+                        <div class="show-date">
+                            <span class="show-day">18</span>
+                            <span class="show-month">ABR</span>
+                        </div>
+                        <div class="show-info">
+                            <h3>Radio City Music Hall</h3>
+                            <p>Concierto principal</p>
+                            <p class="show-details">El evento más grande del tour en uno de los lugares más icónicos de Nueva York.</p>
+                        </div>
+                        <div class="show-status">
+                            <button class="btn-comprar-ticket" onclick="mostrarAlertaTickets()">Próximamente</button>
+                        </div>
+                    </div>
+                    <div class="show-item">
+                        <div class="show-date">
+                            <span class="show-day">02</span>
+                            <span class="show-month">MAY</span>
+                        </div>
+                        <div class="show-info">
+                            <h3>Beacon Theatre, NYC</h3>
+                            <p>Show especial</p>
+                            <p class="show-details">Una noche memorable en un teatro histórico de Nueva York.</p>
+                        </div>
+                        <div class="show-status">
+                            <button class="btn-comprar-ticket" onclick="mostrarAlertaTickets()">Próximamente</button>
+                        </div>
+                    </div>
+                    <div class="show-item">
+                        <div class="show-date">
+                            <span class="show-day">12</span>
+                            <span class="show-month">MAY</span>
+                        </div>
+                        <div class="show-info">
+                            <h3>Madison Square Garden</h3>
+                            <p>Concierto de clausura</p>
+                            <p class="show-details">El gran final del tour en el lugar más emblemático de Nueva York.</p>
+                        </div>
+                        <div class="show-status">
+                            <button class="btn-comprar-ticket" onclick="mostrarAlertaTickets()">Próximamente</button>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="about">
-            2025. Creado por Zoe Del Moral y Alejandra Adrian. Licenciatura en Artes Multimediales - UNA
-            <a href="sobre-nosotras.html">Sobre Nosotras</a>
+        </section>
+
+        <!-- FECHAS Y LUGARES -->
+        <section id="fechas-lugares" class="section-fechas">
+            <div class="container">
+                <h2 class="section-title">Fechas y Lugares</h2>
+                <p class="section-description">
+                    Consulta todas las fechas y lugares del tour. Los tickets estarán disponibles próximamente.
+                </p>
+                <div class="tabla-fechas">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Fecha</th>
+                                <th>Ciudad</th>
+                                <th>Venue</th>
+                                <th>Hora</th>
+                                <th>Estado</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>15 Mar 2026</td>
+                                <td>Nueva York</td>
+                                <td>Central Park</td>
+                                <td>20:00</td>
+                                <td>Próximamente</td>
+                            </tr>
+                            <tr>
+                                <td>22 Mar 2026</td>
+                                <td>Nueva York</td>
+                                <td>The Blue Note</td>
+                                <td>21:00</td>
+                                <td>Próximamente</td>
+                            </tr>
+                            <tr>
+                                <td>05 Abr 2026</td>
+                                <td>Nueva York</td>
+                                <td>Bowery Ballroom</td>
+                                <td>20:30</td>
+                                <td>Próximamente</td>
+                            </tr>
+                            <tr>
+                                <td>18 Abr 2026</td>
+                                <td>Nueva York</td>
+                                <td>Radio City Music Hall</td>
+                                <td>19:30</td>
+                                <td>Próximamente</td>
+                            </tr>
+                            <tr>
+                                <td>02 May 2026</td>
+                                <td>Nueva York</td>
+                                <td>Beacon Theatre</td>
+                                <td>20:00</td>
+                                <td>Próximamente</td>
+                            </tr>
+                            <tr>
+                                <td>12 May 2026</td>
+                                <td>Nueva York</td>
+                                <td>Madison Square Garden</td>
+                                <td>20:00</td>
+                                <td>Próximamente</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
-            <div class="contacto">
-            <a href="contacto.html">Contacto</a>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2024 Phoebe Buffay. Todos los derechos reservados.</p>
             </div>
-        </footer>
-    </body>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../javascript/script.js"></script>
+    <script>
+        function mostrarAlertaTickets() {
+            Swal.fire({
+                title: "¡Ups!",
+                text: "Los tickets aún no están a la venta. Estarán disponibles próximamente.",
+                icon: "info",
+                confirmButtonText: "Entendido",
+                confirmButtonColor: "#BB8DD6"
+            });
+        }
+    </script>
+</body>
 </html>
+
