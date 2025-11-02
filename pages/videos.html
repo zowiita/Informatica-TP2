@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<<<<<<< HEAD
     <title>Phoebe Buffay - Cantante, compositora y espíritu libre</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
@@ -34,3 +35,199 @@
     </main>
 </body>
 </html>
+=======
+    <title>Videos - Phoebe Buffay</title>
+    <!-- NOTA: Ahora usamos solo Tailwind CSS. Se puede mantener estilos.css solo para estilos muy específicos si es necesario -->
+    <!-- <link rel="stylesheet" href="../css/estilos.css"> -->
+    
+    <!-- ========================================================================
+         TAILWIND CSS - CONFIGURADO Y LISTO PARA USAR
+         ========================================================================
+         ✅ Tailwind CSS está instalado, configurado y LISTO PARA USAR.
+         
+         Configuración incluye:
+         - Colores personalizados del proyecto (violeta-oscuro, lila, amarillo, etc.)
+         - Fuentes personalizadas (Playfair Display, Inter)
+         
+         CLASES PERSONALIZADAS DISPONIBLES:
+         - Colores: bg-lila, text-violeta-oscuro, bg-amarillo, bg-verde, etc.
+         - Fuentes: font-playfair, font-inter
+         
+         EJEMPLOS:
+         - Botón: <button class="bg-lila text-white px-4 py-2 rounded-lg">Click</button>
+         - Texto: <h1 class="text-violeta-oscuro font-playfair text-4xl">Título</h1>
+         - Tarjeta: <div class="bg-white p-6 rounded-lg shadow-md">Contenido</div>
+    -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        // Configuración personalizada de Tailwind con los colores del proyecto
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'violeta-oscuro': '#1a0d2e',
+                        'lila': '#BB8DD6',
+                        'amarillo': '#F5EB79',
+                        'verde': '#719476',
+                        'gris-claro': '#f8f9fa',
+                        'gris-oscuro': '#2d2d2d',
+                        'gris-medio': '#6b6b6b',
+                    },
+                    fontFamily: {
+                        'playfair': ['Playfair Display', 'serif'],
+                        'inter': ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Cargar fuentes de Google Fonts (Inter y Playfair Display) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Estilos mínimos para el menú móvil (complementa Tailwind) -->
+    <style>
+        /* Menú móvil - solo para la funcionalidad toggle */
+        @media (max-width: 767px) {
+            #navList {
+                display: none;
+            }
+            #navList.active {
+                display: flex !important;
+                flex-direction: column;
+                width: 100%;
+                gap: 1rem;
+                margin-top: 1rem;
+            }
+        }
+    </style>
+</head>
+<body class="font-inter text-gris-oscuro bg-white overflow-x-hidden">
+    <!-- HEADER -->
+    <header class="bg-white/95 backdrop-blur-md sticky top-0 z-50 shadow-sm transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-5">
+            <div class="flex justify-between items-center flex-wrap py-5">
+                <div class="logo">
+                    <a href="../index.html" class="no-underline text-inherit">
+                        <h1 class="font-playfair text-3xl font-semibold text-violeta-oscuro tracking-tight transition-colors duration-300 hover:text-lila">
+                            Phoebe Buffay
+                        </h1>
+                    </a>
+                </div>
+                <nav class="nav">
+                    <button class="md:hidden bg-transparent border-none text-2xl cursor-pointer text-gris-oscuro" id="mobileMenuBtn">☰</button>
+                    <ul class="hidden md:flex list-none gap-8 flex-wrap items-center" id="navList">
+                        <li><a href="../index.html" class="text-gris-oscuro no-underline font-normal text-sm py-2 relative transition-colors duration-300 hover:text-lila after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-lila after:transition-all after:duration-300 hover:after:w-full">Inicio</a></li>
+                        <li><a href="musica.html" class="text-gris-oscuro no-underline font-normal text-sm py-2 relative transition-colors duration-300 hover:text-lila after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-lila after:transition-all after:duration-300 hover:after:w-full">Música</a></li>
+                        <li><a href="biografia.html" class="text-gris-oscuro no-underline font-normal text-sm py-2 relative transition-colors duration-300 hover:text-lila after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-lila after:transition-all after:duration-300 hover:after:w-full">Biografía</a></li>
+                        <li><a href="tour.html" class="text-gris-oscuro no-underline font-normal text-sm py-2 relative transition-colors duration-300 hover:text-lila after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-lila after:transition-all after:duration-300 hover:after:w-full">Tour</a></li>
+                        <li><a href="videos.html" class="text-lila no-underline font-semibold text-sm py-2 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-lila">Videos</a></li>
+                        <li><a href="contacto.html" class="text-gris-oscuro no-underline font-normal text-sm py-2 relative transition-colors duration-300 hover:text-lila after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-lila after:transition-all after:duration-300 hover:after:w-full">Contacto</a></li>
+                        <li><a href="sobre-proyecto.html" class="text-gris-oscuro no-underline font-normal text-sm py-2 relative transition-colors duration-300 hover:text-lila after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-lila after:transition-all after:duration-300 hover:after:w-full">Sobre el proyecto</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main class="min-h-[calc(100vh-200px)]">
+        <!-- VIDEOS SECTION -->
+        <section class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-5">
+                <h2 class="font-playfair text-5xl font-semibold text-violeta-oscuro mb-4 text-center tracking-tight">Galería de Videos</h2>
+                <p class="text-lg text-gris-medio text-center max-w-3xl mx-auto mb-12 leading-relaxed">
+                    Disfruta de los mejores momentos musicales de Phoebe Buffay. 
+                    Desde sus presentaciones más íntimas hasta sus grandes conciertos.
+                </p>
+                
+                <!-- Grid de videos -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+                    <!-- Video 1 -->
+                    <div class="bg-white rounded-2xl shadow-xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+                        <div class="relative w-full pb-[56.25%] h-0 overflow-hidden">
+                            <iframe 
+                                class="absolute top-0 left-0 w-full h-full border-0"
+                                src="https://www.youtube.com/embed/GxqYnWVm4Yc" 
+                                title="Phoebe Buffay - Video 1"
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                    </div>
+
+                    <!-- Video 2 -->
+                    <div class="bg-white rounded-2xl shadow-xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+                        <div class="relative w-full pb-[56.25%] h-0 overflow-hidden">
+                            <iframe 
+                                class="absolute top-0 left-0 w-full h-full border-0"
+                                src="https://www.youtube.com/embed/M5KASY2Utc4" 
+                                title="Phoebe Buffay - Video 2"
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                    </div>
+
+                    <!-- Video 3 -->
+                    <div class="bg-white rounded-2xl shadow-xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+                        <div class="relative w-full pb-[56.25%] h-0 overflow-hidden">
+                            <iframe 
+                                class="absolute top-0 left-0 w-full h-full border-0"
+                                src="https://www.youtube.com/embed/lRFLShL1izM" 
+                                title="Phoebe Buffay - Video 3"
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                    </div>
+
+                    <!-- Video 4 -->
+                    <div class="bg-white rounded-2xl shadow-xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+                        <div class="relative w-full pb-[56.25%] h-0 overflow-hidden">
+                            <iframe 
+                                class="absolute top-0 left-0 w-full h-full border-0"
+                                src="https://www.youtube.com/embed/EYWsYyR7zFo" 
+                                title="Phoebe Buffay - Smelly Cat"
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                    </div>
+
+                    <!-- Video 5 -->
+                    <div class="bg-white rounded-2xl shadow-xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl md:col-span-2 lg:col-span-1 lg:mx-auto max-w-2xl">
+                        <div class="relative w-full pb-[56.25%] h-0 overflow-hidden">
+                            <iframe 
+                                class="absolute top-0 left-0 w-full h-full border-0"
+                                src="https://www.youtube.com/embed/k5JOx--5EbM" 
+                                title="Phoebe Buffay - Video 5"
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-violeta-oscuro text-white py-10 text-center">
+        <div class="max-w-7xl mx-auto px-5">
+            <div>
+                <p class="mb-2 opacity-90">&copy; 2024 Phoebe Buffay. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cargar nuestro archivo JavaScript principal con todas las funcionalidades -->
+    <script src="../javascript/script.js"></script>
+</body>
+</html>
+>>>>>>> 55528e59c7662572d9f638f56862bc762da0f3a6
