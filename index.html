@@ -4,22 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Phoebe Buffay - Cantante, compositora y espíritu libre</title>
-    <link rel="stylesheet" href="../css/estilos.css">
-    <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="css/output.css" rel="stylesheet">
 </head>
 <body>
-    <!-- HEADER -->
     <header class="header">
-        <div class="container">
+        <div class="container mx-auto">
             <div class="logo">
                 <a href="index.html" class="logo-link">
                     <h1 class="logo-title">Phoebe Buffay</h1>
                 </a>
             </div>
-            <nav class="nav">
-                <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
-                <ul class="nav-list" id="navList">
+            <nav>
+                <button>☰</button>
+                <ul>
                     <li><a href="index.html" class="nav-link">Inicio</a></li>
                     <li><a href="pages/musica.html" class="nav-link">Música</a></li>
                     <li><a href="pages/biografia.html" class="nav-link">Biografía</a></li>
@@ -31,28 +30,19 @@
             </nav>
         </div>
     </header>
-
-    <!-- MAIN CONTENT -->
-    <main class="main">
-        <!-- HERO SECTION / INICIO -->
-        <section id="inicio" class="hero">
-            <div class="hero-background">
-                <img src="../img/Phoebefondoverde.jpg" alt="Phoebe Buffay" class="hero-image">
+    <main>
+        <section>
+            <div class="container mx auto">
+                <img src="../img/Phoebefondoverde.jpg" alt="Phoebe Buffay">
             </div>
-            <div class="hero-overlay"></div>
-            <div class="container">
-                <div class="hero-content">
-                    <h1 class="hero-title">Phoebe Buffay</h1>
-                    <p class="hero-subtitle">Cantante, compositora, masajista y espíritu libre de Nueva York</p>
-                </div>
-            </div>
+            <h1>Phoebe Buffay</h1>
+            <p>Cantante, compositora, masajista y espíritu libre de Nueva York</p>         
         </section>
-
         <!-- VIDEO MUSICAL -->
-        <section class="video-section">
-            <div class="container">
+        <section >
+            <div class="container mx auto">
                 <h2 class="section-title">Video Musical</h2>
-                <div class="video-container">
+                <div class="mx auto">
                     <iframe 
                         src="https://www.youtube.com/embed/EYWsYyR7zFo" 
                         title="Phoebe Buffay - Smelly Cat"
@@ -63,16 +53,15 @@
                 </div>
             </div>
         </section>
-
         <!-- MÚSICA SECTION -->
-        <section id="musica" class="section-musica">
-            <div class="container">
-                <h2 class="section-title">Música </h2>
-                <div class="musica-content">
-                    <p class="section-description">
-                        La música de Phoebe Buffay es una mezcla única de humor, ternura y autenticidad. 
-                        Desde sus presentaciones en Central Park hasta sus composiciones más íntimas, 
-                        cada canción cuenta una historia especial.
+        <section>
+            <div class="container mx auto">
+                <h2>Música</h2>
+                <div>
+                    <p>
+                    La música de Phoebe Buffay es una mezcla única de humor, ternura y autenticidad. 
+                    Desde sus presentaciones en Central Park hasta sus composiciones más íntimas, 
+                    cada canción cuenta una historia especial.
                     </p>
                     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 2.5rem; max-width: 1200px; margin: 0 auto 3rem;">
                         <div class="video-container">
@@ -84,7 +73,7 @@
                                 allowfullscreen>
                             </iframe>
                         </div>
-                        <div class="video-container">
+                        <div>
                             <iframe 
                                 src="https://www.youtube.com/embed/8oGesoOOIyU" 
                                 title="Phoebe Buffay - Canción"
@@ -94,104 +83,101 @@
                             </iframe>
                         </div>
                     </div>
-                    <div class="text-center" style="margin-top: 3rem;">
-                        <a href="musica.html" class="btn btn-primary">Ver más música</a>
+                    <div>
+                    <a href="pages/musica.html">Ver más música</a>
                     </div>
                 </div>
             </div>
         </section>
-
         <!-- TOUR SECTION -->
-        <section id="tour" class="section-tour">
-            <div class="container">
-                <h2 class="section-title">Tour 🎤</h2>
-                <div class="tour-header">
-                    <p class="tour-notice">Tickets a la venta próximamente</p>
+        <section>
+            <div class="container mx auto">
+                <h2>Tour</h2>
+                <div>
+                <p>Tickets a la venta próximamente</p>
                 </div>
-                <div class="tour-shows">
-                    <div class="show-item">
-                        <div class="show-date">
-                            <span class="show-day">15</span>
-                            <span class="show-month">MAR</span>
+                <div>
+                    <div>
+                        <div>
+                        <span>15</span>
+                        <span>MAR</span>
                         </div>
-                        <div class="show-info">
-                            <h3>Central Park, Nueva York</h3>
-                            <p>Show acústico al aire libre</p>
+                        <div>
+                        <h3>Central Park, Nueva York</h3>
+                        <p>Show acústico al aire libre</p>
                         </div>
-                        <div class="show-status">
-                            <button class="btn-comprar-ticket" onclick="mostrarAlertaTickets()">Próximamente</button>
-                        </div>
-                    </div>
-                    <div class="show-item">
-                        <div class="show-date">
-                            <span class="show-day">22</span>
-                            <span class="show-month">MAR</span>
-                        </div>
-                        <div class="show-info">
-                            <h3>The Blue Note, Manhattan</h3>
-                            <p>Concierto íntimo</p>
-                        </div>
-                        <div class="show-status">
-                            <button class="btn-comprar-ticket" onclick="mostrarAlertaTickets()">Próximamente</button>
+                        <div>
+                        <button onclick="mostrarAlertaTickets()">Próximamente</button>
                         </div>
                     </div>
-                    <div class="show-item">
-                        <div class="show-date">
-                            <span class="show-day">05</span>
-                            <span class="show-month">ABR</span>
+                    <div>
+                        <div>
+                        <span>22</span>
+                        <span>MAR</span>
                         </div>
-                        <div class="show-info">
-                            <h3>Bowery Ballroom, NYC</h3>
-                            <p>Noche especial con invitados</p>
+                        <div>
+                        <h3>The Blue Note, Manhattan</h3>
+                        <p>Concierto íntimo</p>
                         </div>
-                        <div class="show-status">
-                            <button class="btn-comprar-ticket" onclick="mostrarAlertaTickets()">Próximamente</button>
-                        </div>
-                    </div>
-                    <div class="show-item">
-                        <div class="show-date">
-                            <span class="show-day">18</span>
-                            <span class="show-month">ABR</span>
-                        </div>
-                        <div class="show-info">
-                            <h3>Radio City Music Hall</h3>
-                            <p>Concierto principal</p>
-                        </div>
-                        <div class="show-status">
-                            <button class="btn-comprar-ticket" onclick="mostrarAlertaTickets()">Próximamente</button>
+                        <div>
+                        <button onclick="mostrarAlertaTickets()">Próximamente</button>
                         </div>
                     </div>
-                    <div class="show-item">
-                        <div class="show-date">
-                            <span class="show-day">02</span>
-                            <span class="show-month">MAY</span>
+                    <div>
+                        <div>
+                        <span>05</span>
+                        <span>ABR</span>
                         </div>
-                        <div class="show-info">
-                            <h3>Beacon Theatre, NYC</h3>
-                            <p>Show especial</p>
+                        <div>
+                        <h3>Bowery Ballroom, NYC</h3>
+                        <p>Noche especial con invitados</p>
                         </div>
-                        <div class="show-status">
-                            <button class="btn-comprar-ticket" onclick="mostrarAlertaTickets()">Próximamente</button>
+                        <div>
+                        <button onclick="mostrarAlertaTickets()">Próximamente</button>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                        <span>18</span>
+                        <span>ABR</span>
+                        </div>
+                        <div>
+                        <h3>Radio City Music Hall</h3>
+                        <p>Concierto principal</p>
+                        </div>
+                        <div>
+                        <button onclick="mostrarAlertaTickets()">Próximamente</button>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                        <span>02</span>
+                        <span>MAY</span>
+                        </div>
+                        <div>
+                        <h3>Beacon Theatre, NYC</h3>
+                        <p>Show especial</p>
+                        </div>
+                        <div>
+                        <button onclick="mostrarAlertaTickets()">Próximamente</button>
                         </div>
                     </div>
                 </div>
-                <div class="text-center" style="margin-top: 3rem;">
-                    <a href="tour.html" class="btn btn-primary">Ver todas las fechas</a>
+                <div>
+                <a href="pages/tour.html">Ver todas las fechas</a>
                 </div>
             </div>
         </section>
     </main>
-
-    <!-- FOOTER -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <p>&copy; 2024 Phoebe Buffay. Todos los derechos reservados.</p>            </div>
+    <footer>
+        <div class="container mx auto">
+            <div>
+            <p>&copy; 2024 Phoebe Buffay. Todos los derechos reservados.</p>
+            </div>
         </div>
     </footer>
-
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="../javascript/script.js"></script>
+    <script src="../js/script.js"></script>
     <script>
         function mostrarAlertaTickets() {
             Swal.fire({
