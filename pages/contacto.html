@@ -4,77 +4,174 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto - Phoebe Buffay</title>
-    <link rel="stylesheet" href="../css/estilos.css">
+    <!-- NOTA: Ahora usamos solo Tailwind CSS -->
+    <!-- <link rel="stylesheet" href="../css/estilos.css"> -->
+    
+    <!-- ========================================================================
+         TAILWIND CSS - CONFIGURADO Y LISTO PARA USAR
+         ========================================================================
+         ✅ Tailwind CSS está instalado, configurado y LISTO PARA USAR.
+         
+         Configuración incluye:
+         - Colores personalizados del proyecto (violeta-oscuro, lila, amarillo, etc.)
+         - Fuentes personalizadas (Playfair Display, Inter)
+         
+         CLASES PERSONALIZADAS DISPONIBLES:
+         - Colores: bg-lila, text-violeta-oscuro, bg-amarillo, bg-verde, etc.
+         - Fuentes: font-playfair, font-inter
+         
+         EJEMPLOS:
+         - Botón: <button class="bg-lila text-white px-4 py-2 rounded-lg">Click</button>
+         - Texto: <h1 class="text-violeta-oscuro font-playfair text-4xl">Título</h1>
+         - Tarjeta: <div class="bg-white p-6 rounded-lg shadow-md">Contenido</div>
+    -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        // Configuración personalizada de Tailwind con los colores del proyecto
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'violeta-oscuro': '#1a0d2e',
+                        'lila': '#BB8DD6',
+                        'amarillo': '#F5EB79',
+                        'verde': '#719476',
+                        'gris-claro': '#f8f9fa',
+                        'gris-oscuro': '#2d2d2d',
+                        'gris-medio': '#6b6b6b',
+                    },
+                    fontFamily: {
+                        'playfair': ['Playfair Display', 'serif'],
+                        'inter': ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Cargar fuentes de Google Fonts (Inter y Playfair Display) -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Estilos mínimos para el menú móvil y errores del formulario -->
+    <style>
+        @media (max-width: 767px) {
+            #navList {
+                display: none;
+            }
+            #navList.active {
+                display: flex !important;
+                flex-direction: column;
+                width: 100%;
+                gap: 1rem;
+                margin-top: 1rem;
+            }
+        }
+        .error-message {
+            display: block;
+            color: #e74c3c;
+            font-size: 0.85rem;
+            margin-top: 0.5rem;
+            min-height: 1.2rem;
+        }
+    </style>
 </head>
-<body>
+<body class="font-inter text-gris-oscuro bg-white overflow-x-hidden">
     <!-- HEADER -->
-    <header class="header">
-        <div class="container">
-            <div class="logo">
-                <a href="index.html" class="logo-link">
-                    <h1 class="logo-title">Phoebe Buffay</h1>
-                </a>
+    <header class="bg-white/95 backdrop-blur-md sticky top-0 z-50 shadow-sm transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-5">
+            <div class="flex justify-between items-center flex-wrap py-5">
+                <div class="logo">
+                    <a href="index.html" class="no-underline text-inherit">
+                        <h1 class="font-playfair text-3xl font-semibold text-violeta-oscuro tracking-tight transition-colors duration-300 hover:text-lila">
+                            Phoebe Buffay
+                        </h1>
+                    </a>
+                </div>
+                <nav class="nav">
+                    <button class="md:hidden bg-transparent border-none text-2xl cursor-pointer text-gris-oscuro" id="mobileMenuBtn">☰</button>
+                    <ul class="hidden md:flex list-none gap-8 flex-wrap items-center" id="navList">
+                        <li><a href="index.html" class="text-gris-oscuro no-underline font-normal text-sm py-2 relative transition-colors duration-300 hover:text-lila after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-lila after:transition-all after:duration-300 hover:after:w-full">Inicio</a></li>
+                        <li><a href="musica.html" class="text-gris-oscuro no-underline font-normal text-sm py-2 relative transition-colors duration-300 hover:text-lila after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-lila after:transition-all after:duration-300 hover:after:w-full">Música</a></li>
+                        <li><a href="biografia.html" class="text-gris-oscuro no-underline font-normal text-sm py-2 relative transition-colors duration-300 hover:text-lila after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-lila after:transition-all after:duration-300 hover:after:w-full">Biografía</a></li>
+                        <li><a href="tour.html" class="text-gris-oscuro no-underline font-normal text-sm py-2 relative transition-colors duration-300 hover:text-lila after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-lila after:transition-all after:duration-300 hover:after:w-full">Tour</a></li>
+                        <li><a href="videos.html" class="text-gris-oscuro no-underline font-normal text-sm py-2 relative transition-colors duration-300 hover:text-lila after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-lila after:transition-all after:duration-300 hover:after:w-full">Videos</a></li>
+                        <li><a href="contacto.html" class="text-lila no-underline font-semibold text-sm py-2 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-lila">Contacto</a></li>
+                        <li><a href="sobre-proyecto.html" class="text-gris-oscuro no-underline font-normal text-sm py-2 relative transition-colors duration-300 hover:text-lila after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-lila after:transition-all after:duration-300 hover:after:w-full">Sobre el proyecto</a></li>
+                    </ul>
+                </nav>
             </div>
-            <nav class="nav">
-                <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
-                <ul class="nav-list" id="navList">
-                    <li><a href="../index.html" class="nav-link">Inicio</a></li>
-                    <li><a href="musica.html" class="nav-link">Música</a></li>
-                    <li><a href="biografia.html" class="nav-link">Biografía</a></li>
-                    <li><a href="tour.html" class="nav-link active">Tour</a></li>
-                    <li><a href="videos.html" class="nav-link">Videos</a></li>
-                    <li><a href="contacto.html" class="nav-link">Contacto</a></li>
-                    <li><a href="sobre-proyecto.html" class="nav-link">Sobre el proyecto</a></li>
-                </ul>
-            </nav>
         </div>
     </header>
 
     <!-- MAIN CONTENT -->
-    <main class="main">
+    <main class="min-h-[calc(100vh-200px)]">
         <!-- CONTACTO SECTION -->
-        <section class="section-contacto" style="padding-top: 8rem;">
-            <div class="container">
-                <h2 class="section-title">Contacto</h2>
-                <div class="contacto-content">
-                    <div class="contacto-form">
-                        <h3 style="margin-bottom: 2rem; color: var(--violeta-oscuro);">Envíanos un mensaje</h3>
-                        <form id="contactForm">
-                            <div class="form-group">
-                                <label for="nombre">Nombre</label>
-                                <input type="text" id="nombre" name="nombre" required>
+        <section class="py-32 md:py-20 bg-gris-claro">
+            <div class="max-w-7xl mx-auto px-5">
+                <h2 class="font-playfair text-5xl font-semibold text-violeta-oscuro mb-12 text-center tracking-tight">Contacto</h2>
+                <div class="grid grid-cols-1 lg:grid-cols-[1.5fr_1fr] gap-16 max-w-5xl mx-auto">
+                    <!-- Formulario -->
+                    <div class="bg-white p-12 rounded-2xl shadow-lg">
+                        <h3 class="mb-8 text-2xl font-semibold text-violeta-oscuro">Envíanos un mensaje</h3>
+                        <form id="contactForm" class="space-y-6">
+                            <div>
+                                <label for="nombre" class="block mb-2 text-violeta-oscuro font-medium text-sm">Nombre</label>
+                                <input 
+                                    type="text" 
+                                    id="nombre" 
+                                    name="nombre" 
+                                    required
+                                    class="w-full py-3 px-4 border-2 border-gris-claro rounded-lg font-inter text-base transition-colors duration-300 focus:outline-none focus:border-lila"
+                                >
                                 <span class="error-message" id="nombreError"></span>
                             </div>
-                            <div class="form-group">
-                                <label for="email">Email</label>
-                                <input type="email" id="email" name="email" required>
+                            <div>
+                                <label for="email" class="block mb-2 text-violeta-oscuro font-medium text-sm">Email</label>
+                                <input 
+                                    type="email" 
+                                    id="email" 
+                                    name="email" 
+                                    required
+                                    class="w-full py-3 px-4 border-2 border-gris-claro rounded-lg font-inter text-base transition-colors duration-300 focus:outline-none focus:border-lila"
+                                >
                                 <span class="error-message" id="emailError"></span>
                             </div>
-                            <div class="form-group">
-                                <label for="mensaje">Mensaje</label>
-                                <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+                            <div>
+                                <label for="mensaje" class="block mb-2 text-violeta-oscuro font-medium text-sm">Mensaje</label>
+                                <textarea 
+                                    id="mensaje" 
+                                    name="mensaje" 
+                                    rows="5" 
+                                    required
+                                    class="w-full py-3 px-4 border-2 border-gris-claro rounded-lg font-inter text-base transition-colors duration-300 focus:outline-none focus:border-lila resize-none"
+                                ></textarea>
                                 <span class="error-message" id="mensajeError"></span>
                             </div>
-                            <button type="submit" class="btn btn-primary">Enviar mensaje</button>
+                            <button 
+                                type="submit" 
+                                class="w-full bg-violeta-oscuro text-white py-4 px-10 rounded-full font-semibold text-base transition-all duration-300 text-center font-inter shadow-lg hover:bg-lila hover:-translate-y-0.5 hover:shadow-xl"
+                            >
+                                Enviar mensaje
+                            </button>
                         </form>
                     </div>
-                    <div class="contacto-info">
-                        <h3>Redes sociales</h3>
-                        <div class="redes-sociales">
-                            <a href="https://www.youtube.com/@Friends" target="_blank" class="red-social">
-                                <span class="red-icon">📺</span>
+                    
+                    <!-- Información de contacto -->
+                    <div class="bg-white p-12 rounded-2xl shadow-lg h-fit">
+                        <h3 class="text-2xl font-semibold text-violeta-oscuro mb-8">Redes sociales</h3>
+                        <div class="flex flex-col gap-4 mb-12">
+                            <a href="https://www.youtube.com/@Friends" target="_blank" class="flex items-center gap-4 p-4 border-2 border-gris-claro rounded-lg no-underline text-gris-oscuro transition-all duration-300 hover:border-lila hover:bg-gris-claro hover:translate-x-1">
+                                <span class="text-2xl">📺</span>
                                 <span>YouTube</span>
                             </a>
-                            <a href="https://www.instagram.com/friends/?hl=es" target="_blank" class="red-social">
-                                <span class="red-icon">📷</span>
+                            <a href="https://www.instagram.com/friends/?hl=es" target="_blank" class="flex items-center gap-4 p-4 border-2 border-gris-claro rounded-lg no-underline text-gris-oscuro transition-all duration-300 hover:border-lila hover:bg-gris-claro hover:translate-x-1">
+                                <span class="text-2xl">📷</span>
                                 <span>Instagram</span>
                             </a>
                         </div>
-                        <div style="margin-top: 3rem; padding-top: 2rem; border-top: 2px solid var(--gris-claro);">
-                            <h3 style="margin-bottom: 1rem;">Información de contacto</h3>
-                            <p style="color: var(--gris-medio); line-height: 1.8;">
+                        <div class="mt-12 pt-8 border-t-2 border-gris-claro">
+                            <h3 class="mb-4 text-xl font-semibold text-violeta-oscuro">Información de contacto</h3>
+                            <p class="text-gris-medio leading-relaxed">
                                 <strong>Email:</strong> phoebe@buffay.com<br>
                                 <strong>Booking:</strong> booking@phoebebuffay.com<br>
                                 <strong>Prensa:</strong> prensa@phoebebuffay.com
@@ -84,18 +181,35 @@
                 </div>
             </div>
         </section>
-
     </main>
 
     <!-- FOOTER -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <p>&copy; 2024 Phoebe Buffay. Todos los derechos reservados.</p>            </div>
+    <footer class="bg-violeta-oscuro text-white py-10 text-center">
+        <div class="max-w-7xl mx-auto px-5">
+            <div>
+                <p class="mb-2 opacity-90">&copy; 2024 Phoebe Buffay. Todos los derechos reservados.</p>
+            </div>
         </div>
     </footer>
 
+    <!-- ========================================================================
+         SWEETALERT2 - LIBRERÍA PARA ALERTAS BONITAS
+         ========================================================================
+         Esta línea carga SweetAlert2 desde un CDN (Content Delivery Network).
+         SweetAlert2 es una librería que reemplaza los alert() y confirm() 
+         nativos del navegador con diálogos mucho más bonitos y personalizables.
+         
+         CDN significa que el archivo se carga desde internet, no desde tu carpeta.
+         Esto es útil porque no necesitas descargar la librería, pero requiere internet.
+         
+         En esta página (contacto.html), SweetAlert se usa en el archivo script.js
+         dentro de la función manejarEnvioFormulario() para mostrar:
+         1. Un diálogo de confirmación antes de enviar el formulario
+         2. Un mensaje de éxito después de enviar
+    -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    
+    <!-- Cargar nuestro archivo JavaScript principal con todas las funcionalidades -->
     <script src="../javascript/script.js"></script>
 </body>
 </html>
