@@ -5,6 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Phoebe Buffay - Sobre el proyecto</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        // Configuración personalizada de Tailwind con los colores del proyecto
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'violeta-oscuro': '#1a0d2e',
+                        'lila': '#BB8DD6',
+                        'amarillo': '#F5EB79',
+                        'verde': '#719476',
+                        'gris-claro': '#f8f9fa',
+                        'gris-oscuro': '#2d2d2d',
+                        'gris-medio': '#6b6b6b',
+                    },
+                    fontFamily: {
+                        'playfair': ['Playfair Display', 'serif'],
+                        'inter': ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Cargar fuentes de Google Fonts (Inter y Playfair Display) -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link href="../css/output.css" rel="stylesheet">
 </head>
