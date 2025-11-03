@@ -7,18 +7,35 @@ function initMobileMenu() {
     
     if (mobileMenuBtn && navList) {
         mobileMenuBtn.addEventListener('click', function() {
-            navList.classList.toggle('active');
+            navList.classList.toggle('hidden');
         });
         
         // Cerrar el menú al hacer clic en un enlace
         const navLinks = navList.querySelectorAll('.nav-link');
         navLinks.forEach(link => {
             link.addEventListener('click', function() {
-                navList.classList.remove('active');
+                navList.classList.remove('hidden');
             });
         });
     }
 }
+
+
+//Botón Ver Mas Musica
+const verMas = document.getElementById('btnverMusica');
+verMas.addEventListener('click', function() {
+    window.location.href = 'pages/musica.html'
+});
+
+//Botón Ver todas las Fechas
+const verFechas = document.getElementById('btnverFechas');
+verFechas.addEventListener('click', function() {
+    window.location.href = 'pages/tour.html'
+});
+
+
+
+
 
 // Función para validar email
 function validarEmail(email) {

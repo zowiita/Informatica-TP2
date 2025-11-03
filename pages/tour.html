@@ -3,279 +3,145 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tour 🎤 - Phoebe Buffay</title>
-<<<<<<< HEAD
-=======
-    
-    <!-- TAILWIND CSS - CONFIGURADO Y LISTO PARA USAR -->
->>>>>>> 55528e59c7662572d9f638f56862bc762da0f3a6
+    <title>Phoebe Buffay - Tour</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        // Configuración personalizada de Tailwind con los colores del proyecto
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'violeta-oscuro': '#1a0d2e',
-                        'lila': '#BB8DD6',
-                        'amarillo': '#F5EB79',
-                        'verde': '#719476',
-                        'gris-claro': '#f8f9fa',
-                        'gris-oscuro': '#2d2d2d',
-                        'gris-medio': '#6b6b6b',
-                    },
-                    fontFamily: {
-                        'playfair': ['Playfair Display', 'serif'],
-                        'inter': ['Inter', 'sans-serif'],
-                    }
-                }
-            }
-        }
-    </script>
-    
-    <!-- Cargar fuentes de Google Fonts (Inter y Playfair Display) -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
-<<<<<<< HEAD
-=======
-    
-    <!-- Estilos mínimos para el menú móvil (complementa Tailwind) -->
-    <style>
-        @media (max-width: 767px) {
-            #navList {
-                display: none;
-            }
-            #navList.active {
-                display: flex !important;
-                flex-direction: column;
-                width: 100%;
-                gap: 1rem;
-                margin-top: 1rem;
-            }
-        }
-    </style>
->>>>>>> 55528e59c7662572d9f638f56862bc762da0f3a6
     <link href="../css/output.css" rel="stylesheet">
 </head>
-<body class="font-inter text-gris-oscuro bg-white overflow-x-hidden">
-    <!-- HEADER -->
-    <header class="bg-white/95 backdrop-blur-md sticky top-0 z-50 shadow-sm transition-all duration-300">
-        <div class="max-w-7xl mx-auto px-5">
-            <div class="flex justify-between items-center flex-wrap py-5">
-                <div class="logo">
-                    <a href="../index.html" class="no-underline text-inherit">
-                        <h1 class="font-playfair text-3xl font-semibold text-violeta-oscuro tracking-tight transition-colors duration-300 hover:text-lila">
-                            Phoebe Buffay
-                        </h1>
-                    </a>
-                </div>
-                <nav class="nav">
-                    <button class="md:hidden bg-transparent border-none text-2xl cursor-pointer text-gris-oscuro" id="mobileMenuBtn">☰</button>
-                    <ul class="hidden md:flex list-none gap-8 flex-wrap items-center" id="navList">
-                        <li><a href="../index.html" class="text-gris-oscuro no-underline font-normal text-sm py-2 relative transition-colors duration-300 hover:text-lila after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-lila after:transition-all after:duration-300 hover:after:w-full">Inicio</a></li>
-                        <li><a href="musica.html" class="text-gris-oscuro no-underline font-normal text-sm py-2 relative transition-colors duration-300 hover:text-lila after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-lila after:transition-all after:duration-300 hover:after:w-full">Música</a></li>
-                        <li><a href="biografia.html" class="text-gris-oscuro no-underline font-normal text-sm py-2 relative transition-colors duration-300 hover:text-lila after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-lila after:transition-all after:duration-300 hover:after:w-full">Biografía</a></li>
-                        <li><a href="tour.html" class="text-lila no-underline font-semibold text-sm py-2 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-lila">Tour</a></li>
-                        <li><a href="videos.html" class="text-gris-oscuro no-underline font-normal text-sm py-2 relative transition-colors duration-300 hover:text-lila after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-lila after:transition-all after:duration-300 hover:after:w-full">Videos</a></li>
-                        <li><a href="contacto.html" class="text-gris-oscuro no-underline font-normal text-sm py-2 relative transition-colors duration-300 hover:text-lila after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-lila after:transition-all after:duration-300 hover:after:w-full">Contacto</a></li>
-                        <li><a href="sobre-proyecto.html" class="text-gris-oscuro no-underline font-normal text-sm py-2 relative transition-colors duration-300 hover:text-lila after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-lila after:transition-all after:duration-300 hover:after:w-full">Sobre el proyecto</a></li>
-                    </ul>
-                </nav>
-            </div>
+<body>
+    <header>
+        <div>
+            <button class="md:hidden relative hover:bg-purple-50" id="mobileMenuBtn">☰</button>
+        <nav class="border-s-2">
+            <ul class="md:flex flex-row items-center justify-evenly mx-auto p-2 hidden shadow-md" id="navList">
+            <li class="nav-link hover:bg-violet-50 active:outline-violet-100 text-emerald-950 rounded-lg px-3 py-2 relative font-[Nunito] font-semibold text-lg"><a href="../index.html">Inicio</a></li>
+            <li class="nav-link hover:bg-violet-50 active:outline-violet-100  text-emerald-950 rounded-lg px-3 py-2 relative font-[Nunito] font-semibold text-lg"><a href="musica.html">Música</a></li>
+            <li class="nav-link hover:bg-violet-50 active:outline-violet-100  text-emerald-950 rounded-lg px-3 py-2 relative font-[Nunito] font-semibold text-lg"><a href="biografia.html">Bio</a></li>
+            <li class="nav-link hover:bg-violet-50 active:outline-violet-100  text-emerald-950 rounded-lg px-3 py-2 relative font-[Nunito] font-semibold text-lg"><a href="tour.html">Tour</a></li>
+            <li class="nav-link hover:bg-violet-50 active:outline-violet-100  text-emerald-950 rounded-lg px-3 py-2 relative font-[Nunito] font-semibold text-lg"><a href="videos.html">TV</a></li>
+            </ul>
+        </nav>
+        <div class="flex items-center justify-center">  
+            <a href="../index.html">
+            <img src="../img/logo.png" alt="logo">
+            </a>
+        </div>
         </div>
     </header>
-
-    <!-- MAIN CONTENT -->
-    <main class="min-h-[calc(100vh-200px)] pt-32 md:pt-20">
-        <!-- TOUR SECTION -->
-        <section class="py-20 bg-gradient-to-br from-violeta-oscuro to-[#2d1a4e] text-white">
+    <main class="min-h-[calc(100vh-200px)] bg-emerald-50">
+        <section class="py-20">
             <div class="max-w-7xl mx-auto px-5">
-                <h2 class="font-playfair text-5xl font-semibold text-white mb-12 text-center tracking-tight">Tour 🎤</h2>
+                <h2 class="font-[Nunito] text-4xl font-semibold text-emerald-900 shadow-md border-2 border-emerald-100 shadow-emerald-200 mb-4 text-center py-4">Tour</h2>
                 <div class="text-center mb-12">
-                    <p class="text-xl text-amarillo font-medium tracking-wider">Tickets a la venta próximamente</p>
+                <p class="text-center pb-8 font-[Nunito] text-xl">Tickets a la venta próximamente</p>
                 </div>
                 <div class="max-w-4xl mx-auto">
                     <!-- Show 1 -->
-                    <div class="grid grid-cols-1 md:grid-cols-[100px_1fr_auto] gap-4 md:gap-8 items-center p-6 md:p-8 mb-6 bg-white/5 rounded-xl border border-white/10 transition-all duration-300 hover:bg-white/10 hover:translate-x-1">
+                    <div class="grid grid-cols-1 md:grid-cols-[100px_1fr_auto] gap-4 md:gap-8 items-center p-6 md:p-8 mb-6 bg-white rounded-xl border border-white/10 transition-all duration-300 hover:bg-white/10 hover:translate-x-1">
                         <div class="text-center">
-                            <span class="block text-3xl font-bold leading-none">15</span>
-                            <span class="block text-sm opacity-80 tracking-widest">MAR</span>
+                            <span class="block text-3xl font-bold">15</span>
+                            <span class="block text-sm opacity-80">MAR</span>
                         </div>
                         <div>
-                            <h3 class="text-xl mb-2">Central Park, Nueva York</h3>
-                            <p class="opacity-80 text-sm mb-1">Show acústico al aire libre</p>
-                            <p class="opacity-70 text-xs mt-2">Un concierto íntimo bajo las estrellas en el corazón de Manhattan.</p>
+                            <h3 class="text-xl mb-2">Madison Square, Nueva York</h3>
                         </div>
                         <div class="md:col-span-1">
-                            <button class="w-full md:w-auto py-3 px-6 rounded-full text-sm font-semibold tracking-wide bg-amarillo text-violeta-oscuro border-none cursor-pointer transition-all duration-300 font-inter hover:bg-lila hover:text-white hover:-translate-y-0.5 hover:shadow-lg" onclick="mostrarAlertaTickets()">Próximamente</button>
+                            <button class="w-full md:w-auto py-3 px-6 rounded-full text-sm font-semibold tracking-wide border-2 cursor-pointer transition-all duration-300 hover:bg-violet-300 hover:-translate-y-0.5 hover:shadow-lg" onclick="mostrarAlertaTickets()">Próximamente</button>
                         </div>
                     </div>
 
                     <!-- Show 2 -->
-                    <div class="grid grid-cols-1 md:grid-cols-[100px_1fr_auto] gap-4 md:gap-8 items-center p-6 md:p-8 mb-6 bg-white/5 rounded-xl border border-white/10 transition-all duration-300 hover:bg-white/10 hover:translate-x-1">
+                    <div class="grid grid-cols-1 md:grid-cols-[100px_1fr_auto] gap-4 md:gap-8 items-center p-6 md:p-8 mb-6 bg-white rounded-xl border border-white/10 transition-all duration-300 hover:bg-white/10 hover:translate-x-1">
                         <div class="text-center">
-                            <span class="block text-3xl font-bold leading-none">22</span>
-                            <span class="block text-sm opacity-80 tracking-widest">MAR</span>
+                            <span class="block text-3xl font-bold">22</span>
+                            <span class="block text-sm opacity-80">MAR</span>
                         </div>
                         <div>
-                            <h3 class="text-xl mb-2">The Blue Note, Manhattan</h3>
-                            <p class="opacity-80 text-sm mb-1">Concierto íntimo</p>
-                            <p class="opacity-70 text-xs mt-2">Una noche especial en uno de los venues más emblemáticos de Nueva York.</p>
+                            <h3 class="text-xl mb-2">Blue Bird Cafe, Nashville TN</h3>
                         </div>
                         <div class="md:col-span-1">
-                            <button class="w-full md:w-auto py-3 px-6 rounded-full text-sm font-semibold tracking-wide bg-amarillo text-violeta-oscuro border-none cursor-pointer transition-all duration-300 font-inter hover:bg-lila hover:text-white hover:-translate-y-0.5 hover:shadow-lg" onclick="mostrarAlertaTickets()">Próximamente</button>
+                            <button class="w-full md:w-auto py-3 px-6 rounded-full text-sm font-semibold tracking-wide border-2 cursor-pointer transition-all duration-300 hover:bg-violet-300 hover:-translate-y-0.5 hover:shadow-lg" onclick="mostrarAlertaTickets()">Próximamente</button>
                         </div>
                     </div>
-
                     <!-- Show 3 -->
-                    <div class="grid grid-cols-1 md:grid-cols-[100px_1fr_auto] gap-4 md:gap-8 items-center p-6 md:p-8 mb-6 bg-white/5 rounded-xl border border-white/10 transition-all duration-300 hover:bg-white/10 hover:translate-x-1">
+                    <div class="grid grid-cols-1 md:grid-cols-[100px_1fr_auto] gap-4 md:gap-8 items-center p-6 md:p-8 mb-6 bg-white rounded-xl border border-white/10 transition-all duration-300 hover:bg-white/10 hover:translate-x-1">
                         <div class="text-center">
-                            <span class="block text-3xl font-bold leading-none">05</span>
-                            <span class="block text-sm opacity-80 tracking-widest">ABR</span>
+                            <span class="block text-3xl font-bold">05</span>
+                            <span class="block text-sm opacity-80">ABR</span>
                         </div>
                         <div>
-                            <h3 class="text-xl mb-2">Bowery Ballroom, NYC</h3>
-                            <p class="opacity-80 text-sm mb-1">Noche especial con invitados</p>
-                            <p class="opacity-70 text-xs mt-2">Un show único con artistas invitados y sorpresas especiales.</p>
+                            <h3 class="text-xl mb-2">Larimer Lounge, Denver CO</h3>
                         </div>
                         <div class="md:col-span-1">
-                            <button class="w-full md:w-auto py-3 px-6 rounded-full text-sm font-semibold tracking-wide bg-amarillo text-violeta-oscuro border-none cursor-pointer transition-all duration-300 font-inter hover:bg-lila hover:text-white hover:-translate-y-0.5 hover:shadow-lg" onclick="mostrarAlertaTickets()">Próximamente</button>
+                            <button class="w-full md:w-auto py-3 px-6 rounded-full text-sm font-semibold tracking-wide border-2 cursor-pointer transition-all duration-300 hover:bg-violet-300 hover:-translate-y-0.5 hover:shadow-lg" onclick="mostrarAlertaTickets()">Próximamente</button>
                         </div>
                     </div>
-
                     <!-- Show 4 -->
-                    <div class="grid grid-cols-1 md:grid-cols-[100px_1fr_auto] gap-4 md:gap-8 items-center p-6 md:p-8 mb-6 bg-white/5 rounded-xl border border-white/10 transition-all duration-300 hover:bg-white/10 hover:translate-x-1">
+                    <div class="grid grid-cols-1 md:grid-cols-[100px_1fr_auto] gap-4 md:gap-8 items-center p-6 md:p-8 mb-6 bg-white rounded-xl border border-white/10 transition-all duration-300 hover:bg-white/10 hover:translate-x-1">
                         <div class="text-center">
-                            <span class="block text-3xl font-bold leading-none">18</span>
-                            <span class="block text-sm opacity-80 tracking-widest">ABR</span>
+                            <span class="block text-3xl font-bold">10</span>
+                            <span class="block text-sm opacity-80">ABR</span>
                         </div>
                         <div>
-                            <h3 class="text-xl mb-2">Radio City Music Hall</h3>
-                            <p class="opacity-80 text-sm mb-1">Concierto principal</p>
-                            <p class="opacity-70 text-xs mt-2">El evento más grande del tour en uno de los lugares más icónicos de Nueva York.</p>
+                            <h3 class="text-xl mb-2">Stubb's Indoor, Austin TX</h3>
                         </div>
                         <div class="md:col-span-1">
-                            <button class="w-full md:w-auto py-3 px-6 rounded-full text-sm font-semibold tracking-wide bg-amarillo text-violeta-oscuro border-none cursor-pointer transition-all duration-300 font-inter hover:bg-lila hover:text-white hover:-translate-y-0.5 hover:shadow-lg" onclick="mostrarAlertaTickets()">Próximamente</button>
+                            <button class="w-full md:w-auto py-3 px-6 rounded-full text-sm font-semibold tracking-wide border-2 cursor-pointer transition-all duration-300 hover:bg-violet-300 hover:-translate-y-0.5 hover:shadow-lg" onclick="mostrarAlertaTickets()">Próximamente</button>
                         </div>
-                    </div>
-
+                    </div>                    
                     <!-- Show 5 -->
-                    <div class="grid grid-cols-1 md:grid-cols-[100px_1fr_auto] gap-4 md:gap-8 items-center p-6 md:p-8 mb-6 bg-white/5 rounded-xl border border-white/10 transition-all duration-300 hover:bg-white/10 hover:translate-x-1">
+                    <div class="grid grid-cols-1 md:grid-cols-[100px_1fr_auto] gap-4 md:gap-8 items-center p-6 md:p-8 mb-6 bg-white rounded-xl border border-white/10 transition-all duration-300 hover:bg-white/10 hover:translate-x-1">
                         <div class="text-center">
-                            <span class="block text-3xl font-bold leading-none">02</span>
-                            <span class="block text-sm opacity-80 tracking-widest">MAY</span>
+                            <span class="block text-3xl font-bold">13</span>
+                            <span class="block text-sm opacity-80">ABR</span>
                         </div>
                         <div>
-                            <h3 class="text-xl mb-2">Beacon Theatre, NYC</h3>
-                            <p class="opacity-80 text-sm mb-1">Show especial</p>
-                            <p class="opacity-70 text-xs mt-2">Una noche memorable en un teatro histórico de Nueva York.</p>
+                            <h3 class="text-xl mb-2">The Hideout, Chicago IL</h3>
                         </div>
                         <div class="md:col-span-1">
-                            <button class="w-full md:w-auto py-3 px-6 rounded-full text-sm font-semibold tracking-wide bg-amarillo text-violeta-oscuro border-none cursor-pointer transition-all duration-300 font-inter hover:bg-lila hover:text-white hover:-translate-y-0.5 hover:shadow-lg" onclick="mostrarAlertaTickets()">Próximamente</button>
+                            <button class="w-full md:w-auto py-3 px-6 rounded-full text-sm font-semibold tracking-wide border-2 cursor-pointer transition-all duration-300 hover:bg-violet-300 hover:-translate-y-0.5 hover:shadow-lg" onclick="mostrarAlertaTickets()">Próximamente</button>
                         </div>
                     </div>
-
                     <!-- Show 6 -->
-                    <div class="grid grid-cols-1 md:grid-cols-[100px_1fr_auto] gap-4 md:gap-8 items-center p-6 md:p-8 mb-6 bg-white/5 rounded-xl border border-white/10 transition-all duration-300 hover:bg-white/10 hover:translate-x-1">
+                    <div class="grid grid-cols-1 md:grid-cols-[100px_1fr_auto] gap-4 md:gap-8 items-center p-6 md:p-8 mb-6 bg-white rounded-xl border border-white/10 transition-all duration-300 hover:bg-white/10 hover:translate-x-1">
                         <div class="text-center">
-                            <span class="block text-3xl font-bold leading-none">12</span>
-                            <span class="block text-sm opacity-80 tracking-widest">MAY</span>
+                            <span class="block text-3xl font-bold">15</span>
+                            <span class="block text-sm opacity-80">ABR</span>
                         </div>
                         <div>
-                            <h3 class="text-xl mb-2">Madison Square Garden</h3>
-                            <p class="opacity-80 text-sm mb-1">Concierto de clausura</p>
-                            <p class="opacity-70 text-xs mt-2">El gran final del tour en el lugar más emblemático de Nueva York.</p>
+                            <h3 class="text-xl mb-2">Berlin, Chicago IL</h3>
                         </div>
                         <div class="md:col-span-1">
-                            <button class="w-full md:w-auto py-3 px-6 rounded-full text-sm font-semibold tracking-wide bg-amarillo text-violeta-oscuro border-none cursor-pointer transition-all duration-300 font-inter hover:bg-lila hover:text-white hover:-translate-y-0.5 hover:shadow-lg" onclick="mostrarAlertaTickets()">Próximamente</button>
+                            <button class="w-full md:w-auto py-3 px-6 rounded-full text-sm font-semibold tracking-wide border-2 cursor-pointer transition-all duration-300 hover:bg-violet-300 hover:-translate-y-0.5 hover:shadow-lg" onclick="mostrarAlertaTickets()">Próximamente</button>
                         </div>
                     </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- FECHAS Y LUGARES -->
-        <section id="fechas-lugares" class="py-20 bg-gris-claro">
-            <div class="max-w-7xl mx-auto px-5">
-                <h2 class="font-playfair text-5xl font-semibold text-violeta-oscuro mb-12 text-center tracking-tight">Fechas y Lugares</h2>
-                <p class="text-lg text-gris-medio text-center max-w-3xl mx-auto mb-12 leading-relaxed">
-                    Consulta todas las fechas y lugares del tour. Los tickets estarán disponibles próximamente.
-                </p>
-                <div class="overflow-x-auto max-w-5xl mx-auto">
-                    <table class="w-full border-collapse bg-white rounded-xl overflow-hidden shadow-lg">
-                        <thead>
-                            <tr>
-                                <th class="bg-violeta-oscuro text-white py-4 px-6 text-left font-semibold text-sm tracking-wider">Fecha</th>
-                                <th class="bg-violeta-oscuro text-white py-4 px-6 text-left font-semibold text-sm tracking-wider">Ciudad</th>
-                                <th class="bg-violeta-oscuro text-white py-4 px-6 text-left font-semibold text-sm tracking-wider">Venue</th>
-                                <th class="bg-violeta-oscuro text-white py-4 px-6 text-left font-semibold text-sm tracking-wider">Hora</th>
-                                <th class="bg-violeta-oscuro text-white py-4 px-6 text-left font-semibold text-sm tracking-wider">Estado</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr class="border-b border-gris-claro hover:bg-gris-claro transition-colors">
-                                <td class="py-4 px-6 text-gris-oscuro">15 Mar 2026</td>
-                                <td class="py-4 px-6 text-gris-oscuro">Nueva York</td>
-                                <td class="py-4 px-6 text-gris-oscuro">Central Park</td>
-                                <td class="py-4 px-6 text-gris-oscuro">20:00</td>
-                                <td class="py-4 px-6 text-gris-oscuro">Próximamente</td>
-                            </tr>
-                            <tr class="border-b border-gris-claro hover:bg-gris-claro transition-colors">
-                                <td class="py-4 px-6 text-gris-oscuro">22 Mar 2026</td>
-                                <td class="py-4 px-6 text-gris-oscuro">Nueva York</td>
-                                <td class="py-4 px-6 text-gris-oscuro">The Blue Note</td>
-                                <td class="py-4 px-6 text-gris-oscuro">21:00</td>
-                                <td class="py-4 px-6 text-gris-oscuro">Próximamente</td>
-                            </tr>
-                            <tr class="border-b border-gris-claro hover:bg-gris-claro transition-colors">
-                                <td class="py-4 px-6 text-gris-oscuro">05 Abr 2026</td>
-                                <td class="py-4 px-6 text-gris-oscuro">Nueva York</td>
-                                <td class="py-4 px-6 text-gris-oscuro">Bowery Ballroom</td>
-                                <td class="py-4 px-6 text-gris-oscuro">20:30</td>
-                                <td class="py-4 px-6 text-gris-oscuro">Próximamente</td>
-                            </tr>
-                            <tr class="border-b border-gris-claro hover:bg-gris-claro transition-colors">
-                                <td class="py-4 px-6 text-gris-oscuro">18 Abr 2026</td>
-                                <td class="py-4 px-6 text-gris-oscuro">Nueva York</td>
-                                <td class="py-4 px-6 text-gris-oscuro">Radio City Music Hall</td>
-                                <td class="py-4 px-6 text-gris-oscuro">19:30</td>
-                                <td class="py-4 px-6 text-gris-oscuro">Próximamente</td>
-                            </tr>
-                            <tr class="border-b border-gris-claro hover:bg-gris-claro transition-colors">
-                                <td class="py-4 px-6 text-gris-oscuro">02 May 2026</td>
-                                <td class="py-4 px-6 text-gris-oscuro">Nueva York</td>
-                                <td class="py-4 px-6 text-gris-oscuro">Beacon Theatre</td>
-                                <td class="py-4 px-6 text-gris-oscuro">20:00</td>
-                                <td class="py-4 px-6 text-gris-oscuro">Próximamente</td>
-                            </tr>
-                            <tr class="hover:bg-gris-claro transition-colors">
-                                <td class="py-4 px-6 text-gris-oscuro">12 May 2026</td>
-                                <td class="py-4 px-6 text-gris-oscuro">Nueva York</td>
-                                <td class="py-4 px-6 text-gris-oscuro">Madison Square Garden</td>
-                                <td class="py-4 px-6 text-gris-oscuro">20:00</td>
-                                <td class="py-4 px-6 text-gris-oscuro">Próximamente</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <!-- Show 7 -->
+                    <div class="grid grid-cols-1 md:grid-cols-[100px_1fr_auto] gap-4 md:gap-8 items-center p-6 md:p-8 mb-6 bg-white rounded-xl border border-white/10 transition-all duration-300 hover:bg-white/10 hover:translate-x-1">
+                        <div class="text-center">
+                            <span class="block text-3xl font-bold">20</span>
+                            <span class="block text-sm opacity-80">ABR</span>
+                        </div>
+                        <div>
+                            <h3 class="text-xl mb-2">The Satellite, Los Angeles CA</h3>
+                        </div>
+                        <div class="md:col-span-1">
+                            <button class="w-full md:w-auto py-3 px-6 rounded-full text-sm font-semibold tracking-wide border-2 cursor-pointer transition-all duration-300 hover:bg-violet-300 hover:-translate-y-0.5 hover:shadow-lg" onclick="mostrarAlertaTickets()">Próximamente</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
-
-    <!-- FOOTER -->
-    <footer class="bg-violeta-oscuro text-white py-10 text-center">
-        <div class="max-w-7xl mx-auto px-5">
-            <div>
-                <p class="mb-2 opacity-90">&copy; 2024 Phoebe Buffay. Todos los derechos reservados.</p>
-            </div>
-        </div>
+    <footer class="bg-emerald-50 opacity-70 py-5">
+        <div class="flex justify-center"><p class="mb-2">&copy; 2025 Phoebe Buffay</p></div>
+        <div class="flex justify-center"><a href="https://youtube.com/playlist?list=PL7PQp2APUAPIlioMzvSBl20yc8PvQAwBc&si=gel9RuYI7K6AQ85Y" target="_blank"><img src="../img/yt thumbnail.png" alt="logo youtube" class="w-5 mb-2"></a></div>
+        <div class="flex justify-center"><a href="contacto.html" class="px-4 underline">Contacto</a>
+        <a href="sobre-proyecto.html" class="px-4 underline">Sobre el proyecto</a></div>
     </footer>
-
     <!-- SweetAlert2 -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    
     <!-- JavaScript principal -->
-    <script src="../javascript/script.js"></script>
-    
+    <script src="../js/script.js"></script>
     <!-- Función para mostrar alerta de tickets -->
     <script>
         function mostrarAlertaTickets() {
