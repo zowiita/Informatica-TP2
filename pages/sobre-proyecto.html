@@ -5,15 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Phoebe Buffay - Sobre el proyecto</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
     <link href="../css/output.css" rel="stylesheet">
 </head>
-<body>
-    <header>
+<body class="font-[Nunito]">
+    <header class="relative bg-white z-50">
         <div>
-            <button class="md:hidden relative hover:bg-purple-50" id="mobileMenuBtn">☰</button>
-        <nav class="border-s-2">
-            <ul class="md:flex flex-row items-center justify-evenly mx-auto p-2 hidden shadow-md" id="navList">
+            <div class="absolute top-0 left-0 flex items-center p-4 sm:hidden z-50">
+                <!-- Mobile menu button-->
+                <button type="button" id="mobileMenuBtn" class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-700 hover:bg-gray-100 focus:outline-none">
+                    <span class="sr-only">Menú principal</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="size-6">
+                        <path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </button>
+            </div>
+        <nav class="border-s-2 relative z-40">
+            <ul class="absolute top-16 left-0 w-full bg-white shadow-lg md:relative md:top-0 md:flex md:flex-row md:items-center md:justify-evenly md:mx-auto md:p-2 md:shadow-md hidden" id="navList">
             <li class="nav-link hover:bg-violet-50 active:outline-violet-100 text-emerald-950 rounded-lg px-3 py-2 relative font-[Nunito] font-semibold text-lg"><a href="../index.html">Inicio</a></li>
             <li class="nav-link hover:bg-violet-50 active:outline-violet-100  text-emerald-950 rounded-lg px-3 py-2 relative font-[Nunito] font-semibold text-lg"><a href="musica.html">Música</a></li>
             <li class="nav-link hover:bg-violet-50 active:outline-violet-100  text-emerald-950 rounded-lg px-3 py-2 relative font-[Nunito] font-semibold text-lg"><a href="biografia.html">Bio</a></li>
@@ -46,5 +56,6 @@
         <div class="flex justify-center"><a href="contacto.html" class="px-4 underline">Contacto</a>
         <a href="sobre-proyecto.html" class="px-4 underline">Sobre el proyecto</a></div>
     </footer>
+    <script src="../js/script.js"></script>
 </body>
 </html>

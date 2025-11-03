@@ -6,32 +6,41 @@ function initMobileMenu() {
     const navList = document.getElementById('navList');
     
     if (mobileMenuBtn && navList) {
-        mobileMenuBtn.addEventListener('click', function() {
+        // Agregar listener al botón
+        mobileMenuBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
             navList.classList.toggle('hidden');
         });
         
         // Cerrar el menú al hacer clic en un enlace
-        const navLinks = navList.querySelectorAll('.nav-link');
+        const navLinks = navList.querySelectorAll('.nav-link a');
         navLinks.forEach(link => {
             link.addEventListener('click', function() {
-                navList.classList.remove('hidden');
+                navList.classList.add('hidden');
             });
         });
+    } else {
+        console.warn('No se encontraron los elementos del menú móvil');
     }
 }
 
 
 //Botón Ver Mas Musica
 const verMas = document.getElementById('btnverMusica');
-verMas.addEventListener('click', function() {
-    window.location.href = 'pages/musica.html'
-});
+if (verMas) {
+    verMas.addEventListener('click', function() {
+        window.location.href = 'pages/musica.html'
+    });
+}
 
 //Botón Ver todas las Fechas
 const verFechas = document.getElementById('btnverFechas');
-verFechas.addEventListener('click', function() {
-    window.location.href = 'pages/tour.html'
-});
+if (verFechas) {
+    verFechas.addEventListener('click', function() {
+        window.location.href = 'pages/tour.html'
+    });
+}
 
 
 
