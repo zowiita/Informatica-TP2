@@ -1,5 +1,3 @@
-// JavaScript para el sitio de Phoebe Buffay
-
 // Función para inicializar el menú móvil
 function initMobileMenu() {
     const mobileMenuBtn = document.getElementById('mobileMenuBtn');
@@ -79,6 +77,9 @@ function mostrarError(campoId, mensaje) {
     }
 }
 
+
+
+
 // Función para validar el formulario de contacto
 function validarFormulario() {
     let esValido = true;
@@ -122,11 +123,7 @@ function manejarEnvioFormulario(e) {
     e.preventDefault();
     
     if (validarFormulario()) {
-        // Obtener valores del formulario
-        const nombre = document.getElementById('nombre').value.trim();
-        const email = document.getElementById('email').value.trim();
-        const mensaje = document.getElementById('mensaje').value.trim();
-        
+               
         // Mostrar confirmación con SweetAlert2
         Swal.fire({
             title: "¿Estás seguro?",
@@ -297,41 +294,6 @@ function initScrollAnimations() {
     });
 }
 
-// Función para efecto parallax en el hero
-function initParallax() {
-    const hero = document.querySelector('.hero');
-    if (!hero) return;
-    
-    window.addEventListener('scroll', function() {
-        const scrolled = window.pageYOffset;
-        const heroContent = hero.querySelector('.hero-content');
-        
-        if (heroContent && scrolled < hero.offsetHeight) {
-            heroContent.style.transform = `translateY(${scrolled * 0.5}px)`;
-            heroContent.style.opacity = 1 - (scrolled / hero.offsetHeight);
-        }
-    });
-}
-
-// Función para cambiar el header al hacer scroll
-function initHeaderScroll() {
-    const header = document.querySelector('.header');
-    if (!header) return;
-    
-    let lastScroll = 0;
-    
-    window.addEventListener('scroll', function() {
-        const currentScroll = window.pageYOffset;
-        
-        if (currentScroll > 100) {
-            header.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
-        } else {
-            header.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.05)';
-        }
-        
-        lastScroll = currentScroll;
-    });
-}
 
 // Función para agregar interactividad a las tarjetas de video
 function initVideoCards() {
@@ -363,8 +325,6 @@ function init() {
     initContactForm();
     initSmoothScroll();
     initScrollAnimations();
-    initParallax();
-    initHeaderScroll();
     initVideoCards();
     
     // Agregar clase para indicar que JavaScript está activo
